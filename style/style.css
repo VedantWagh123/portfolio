@@ -177,8 +177,7 @@ body.dark-mode #dark-toggle {
 
 
 /* ===== Projects Section ===== */
- 
- /* Section */
+  /* ===== Projects Section ===== */
 .section {
   padding: 80px 20px;
   text-align: center;
@@ -275,6 +274,66 @@ body.dark-mode #dark-toggle {
 .project-content a:hover {
   background: #00e6e6;
   box-shadow: 0 0 15px #00e6e6;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+
+  .project-card {
+    width: 80vw; /* Adjusted width for better responsiveness */
+    min-width: 250px;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-content p {
+    font-size: 0.85rem;
+  }
+
+  .project-content a {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-card {
+    width: 90vw; /* Further adjustment for smaller screens */
+  }
+
+  .project-image img {
+    height: 140px; /* Adjusted image height */
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .project-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .project-content p {
+    font-size: 0.8rem;
+  }
+
+  .project-content a {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+}
+
+.project-card {
+  scroll-snap-align: start;
 }
 
 /* ===== Contact Section ===== */
@@ -522,69 +581,7 @@ body.dark-mode {
 
 
 /* project section responshive  */
-
-
-
-@media screen and (max-width: 768px) {
-  .projects-container {
-    flex-wrap: nowrap;
-    gap: 15px;
-    padding: 10px;
-    scroll-snap-type: x mandatory;
-    overflow-x: auto;
-  }
-
-  .project-card {
-    width: 80vw;
-    min-width: 250px;
-  }
-
-  .project-content h3 {
-    font-size: 1rem;
-  }
-
-  .project-content p {
-    font-size: 0.85rem;
-  }
-
-  .project-content a {
-    font-size: 0.8rem;
-    padding: 6px 12px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .project-card {
-    width: 90vw;
-  }
-
-  .project-image img {
-    height: 140px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .project-content h3 {
-    font-size: 0.95rem;
-  }
-
-  .project-content p {
-    font-size: 0.8rem;
-  }
-
-  .project-content a {
-    font-size: 0.75rem;
-    padding: 5px 10px;
-  }
-}
-
-.project-card {
-  scroll-snap-align: start;
-}
-
-
+ 
 
 /* project section responshive  */
 
