@@ -1,11 +1,10 @@
- /* Reset */
+ /* Reset & base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body + center content */
 body {
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #1e1e2f, #2a2a40);
@@ -15,61 +14,35 @@ body {
   align-items: center;
   justify-content: center;
   padding: 30px 15px;
-  text-align: center;
 }
 
-/* Container with backdrop blur and shadow */
+/* Container */
 .project-container {
-  max-width: 850px;
+  max-width: 700px;
   width: 100%;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 18px;
-  padding: 35px 25px;
+  padding: 30px 25px;
   backdrop-filter: blur(16px);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   animation: slideIn 1s ease-out;
-  margin: auto;
 }
 
-/* Project Title */
+/* Title */
 .project-title {
   font-size: 2.2rem;
   color: #00e0ff;
+  text-align: center;
   margin-bottom: 18px;
-  word-wrap: break-word;
 }
 
-/* Typewriter container */
-.typewriter-container {
-  margin-bottom: 25px;
-}
-
-.typewriter-text {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #00ffe5;
-  border-right: 2px solid #00ffe5;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  max-width: 100%;
-}
-
-.highlight-text {
-  color: #ff6bff;
-  font-weight: bold;
-  animation: fadeIn 1.5s ease-in-out 3s forwards;
-  opacity: 0;
-  margin-left: 6px;
-}
-
-/* Description text */
+/* Description */
 .description {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #ccccdd;
-  margin-bottom: 30px;
-  padding: 0 10px;
+  margin-bottom: 28px;
+  text-align: center;
 }
 
 /* Details section */
@@ -78,15 +51,12 @@ body {
   color: #ffcc70;
   margin-bottom: 12px;
   border-bottom: 2px solid #444;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
 }
 
 .feature-list {
   list-style: none;
-  padding-left: 15px;
-  max-width: 650px;
-  margin: 0 auto 35px auto;
-  text-align: left;
+  padding-left: 20px;
 }
 
 .feature-list li {
@@ -96,19 +66,18 @@ body {
   font-size: 0.95rem;
   transition: all 0.3s ease;
   color: #eeeeee;
-  cursor: default;
 }
 
 .feature-list li:hover {
-  transform: translateX(4px);
+  transform: translateX(6px);
   color: #80ffea;
 }
 
-/* Back button */
+/* Button */
 .portfolio-btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
+  margin-top: 30px;
+  padding: 10px 22px;
   background: linear-gradient(90deg, #00eaff, #0077ff);
   color: #fff;
   text-decoration: none;
@@ -124,7 +93,37 @@ body {
   transform: translateY(-2px);
 }
 
+/* Typewriter */
+.typewriter-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.typewriter-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00ffe5;
+  border-right: 2px solid #00ffe5;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.highlight-text {
+  color: #ff6bff;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out 3s forwards;
+  opacity: 0;
+}
+
 /* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -136,24 +135,16 @@ body {
   }
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
+/* RESPONSIVE */
 
-/* ======= Responsive Styling ======= */
-
+/* For tablets & small desktops */
 @media (max-width: 900px) {
   .project-container {
-    max-width: 90%;
-    padding: 30px 20px;
+    max-width: 600px;
+    padding: 28px 22px;
   }
   .project-title {
     font-size: 2rem;
-  }
-  .typewriter-text {
-    font-size: 1.3rem;
   }
   .description {
     font-size: 0.95rem;
@@ -164,58 +155,45 @@ body {
   .feature-list li {
     font-size: 0.9rem;
   }
+  .typewriter-text {
+    font-size: 1.1rem;
+  }
   .portfolio-btn {
-    padding: 11px 22px;
-    font-size: 0.95rem;
+    padding: 9px 20px;
   }
 }
 
-@media (max-width: 600px) {
+/* For mobile phones */
+@media (max-width: 480px) {
   body {
     padding: 20px 10px;
   }
   .project-container {
-    padding: 25px 18px;
+    max-width: 100%;
+    padding: 22px 18px;
+    border-radius: 14px;
   }
   .project-title {
-    font-size: 1.6rem;
-  }
-  .typewriter-text {
-    font-size: 1.1rem;
+    font-size: 1.7rem;
   }
   .description {
     font-size: 0.9rem;
+    margin-bottom: 22px;
   }
   .details-section h2 {
     font-size: 1.1rem;
+    margin-bottom: 10px;
   }
   .feature-list li {
     font-size: 0.85rem;
-  }
-  .portfolio-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .project-title {
-    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
   .typewriter-text {
     font-size: 1rem;
-  }
-  .description {
-    font-size: 0.85rem;
-  }
-  .details-section h2 {
-    font-size: 1rem;
-  }
-  .feature-list li {
-    font-size: 0.8rem;
+    border-right: 1.5px solid #00ffe5;
   }
   .portfolio-btn {
-    padding: 9px 18px;
-    font-size: 0.85rem;
+    padding: 8px 18px;
+    font-size: 0.9rem;
   }
 }
