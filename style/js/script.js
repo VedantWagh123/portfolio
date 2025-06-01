@@ -117,3 +117,18 @@ document.addEventListener("DOMContentLoaded", () => {
 if (window.location.hash && window.location.hash.includes("thank-you")) {
   history.replaceState(null, null, " "); // removes #thank-you
 }
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2 // adjust as needed
+});
+
+document.querySelectorAll('.animate-left, .animate-up').forEach(el => {
+  observer.observe(el);
+});

@@ -159,28 +159,22 @@ body.dark-mode #dark-toggle {
 }
 
 /* ===== Skills Section ===== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-  padding: 20px 0;
+ /* === Scroll Animations === */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
 }
-.skill-card {
-  background: #1b1b1b;
-  padding: 25px;
-  text-align: center;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+.animate-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease;
 }
-.skill-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 18px rgba(0, 255, 255, 0.6);
+.show {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
 }
-.skill-card h3 {
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
+
 
 /* ===== Projects Section ===== */
  
@@ -527,10 +521,173 @@ body.dark-mode {
 }
 
 
+/* project section responshive  */
+
+
+
+@media screen and (max-width: 768px) {
+  .projects-container {
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+
+  .project-card {
+    width: 80vw;
+    min-width: 250px;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-content p {
+    font-size: 0.85rem;
+  }
+
+  .project-content a {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-card {
+    width: 90vw;
+  }
+
+  .project-image img {
+    height: 140px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .project-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .project-content p {
+    font-size: 0.8rem;
+  }
+
+  .project-content a {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+}
+
+.project-card {
+  scroll-snap-align: start;
+}
+
+
+
+/* project section responshive  */
 
 
 
 
+
+
+/* ===== Responsive for Contact + Group Members Section ===== */
+@media screen and (max-width: 992px) {
+  .contact-wrapper {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  form#contact-form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  form#contact-form input,
+  form#contact-form textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  form#contact-form button {
+    font-size: 1rem;
+    padding: 12px 25px;
+    width: fit-content;
+    align-self: center;
+  }
+
+  .popup-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .popup-box h2 {
+    font-size: 24px;
+  }
+
+  .popup-box p {
+    font-size: 14px;
+  }
+
+  .team-scroll {
+    gap: 15px;
+    padding: 10px 5px;
+  }
+
+  .team-card {
+    min-width: 140px;
+    padding: 12px;
+  }
+
+  .team-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .team-card h4 {
+    font-size: 15px;
+  }
+
+  .team-card p {
+    font-size: 13px;
+  }
+
+  .team-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  form#contact-form input,
+  form#contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .team-card {
+    min-width: 130px;
+  }
+
+  .team-card h4 {
+    font-size: 14px;
+  }
+
+  .team-card p {
+    font-size: 12px;
+  }
+
+  .team-title {
+    font-size: 18px;
+  }
+}
 
 
 
