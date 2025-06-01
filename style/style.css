@@ -475,22 +475,67 @@ form#contact-form button {
   color: #ccc;
 }
 
-
 .social-icons {
-  text-align: center;
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.15);
 }
+
 .social-icons a {
-  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e0e0e0;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
+
+.social-icons a:hover {
+  background-color: #00aaff22; /* very light blue background */
+  color: #00aaff;            /* subtle blue text */
+  box-shadow: 0 2px 8px rgba(0, 170, 255, 0.3);
+}
+
 .social-icons img {
-  width: 30px;
+  width: 28px;
+  height: 28px;
   filter: invert(1);
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
-.social-icons img:hover {
-  transform: scale(1.2);
+
+.social-icons a:hover img {
+  transform: scale(1.1); /* subtle scale */
 }
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 20px;
+    padding: 15px 10px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+ 
 
 /* ===== Responsive Media Queries ===== */
 @media (max-width: 768px) {
