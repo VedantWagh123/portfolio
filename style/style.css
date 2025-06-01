@@ -664,6 +664,28 @@ body.dark-mode {
     font-size: 18px;
   }
 }
+.resume-btn {
+  display: inline-block;
+  margin: 30px 10px 20px; /* Top, Left/Right, Bottom */
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #00ffe0;
+  border: 1.5px solid #00ffe0;
+  border-radius: 28px;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 6px #00ffe044, 0 0 10px #00ffe022 inset;
+}
+
+.resume-btn:hover {
+  background: #00ffe0;
+  color: #0a0a0a;
+  box-shadow: 0 0 12px #00ffe0cc;
+  transform: translateY(-2px) scale(1.04);
+}
+
 
 
 

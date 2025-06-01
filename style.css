@@ -1,0 +1,134 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.project-container {
+  max-width: 850px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 40px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1s ease-out;
+}
+
+.project-title {
+  font-size: 2.8rem;
+  color: #00e0ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccccdd;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.details-section h2 {
+  font-size: 1.5rem;
+  color: #ffcc70;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.feature-list li {
+  margin-bottom: 12px;
+  padding-left: 8px;
+  position: relative;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #eeeeee;
+}
+
+.feature-list li:hover {
+  transform: translateX(6px);
+  color: #80ffea;
+}
+
+.portfolio-btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #00eaff, #0077ff);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.portfolio-btn:hover {
+  background: linear-gradient(90deg, #ff00c8, #9b00ff);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+ body {
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+.typewriter-container {
+  text-align: center;
+}
+
+.typewriter-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #00ffe5;
+  border-right: 2px solid #00ffe5;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.highlight-text {
+  color: #ff6bff;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out 3s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

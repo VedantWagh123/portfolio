@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Notes Organizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="project-container">
+    <div class="content-box">
+      <h1 class="project-title">📘 Digital Notes Organizer</h1>
+        
+<div class="typewriter-container">
+  <h2 class="typewriter-text"><span id="type-text"></span><span class="highlight-text">Stay Tuned!</span></h2>
+</div>
+
+      <p class="description">
+        Digital Notes Organizer is an advanced web-based application that helps users store, organize, and retrieve notes with ease. Designed for students, professionals, and creators who want a clean and efficient space to manage all their ideas digitally.
+      </p>
+
+      <div class="details-section">
+        <h2>🔧 Project Highlights:</h2>
+        <ul class="feature-list">
+          <li>📝 Easy note creation with formatting support</li>
+          <li>🔍 Real-time search & tagging functionality</li>
+          <li>📁 Organized folders & categories</li>
+          <li>🌐 Sync across multiple devices (planned)</li>
+          <li>🔐 Secure login & private notes lock</li>
+          <li>🎨 Dark mode + custom color themes</li>
+          <li>📊 Notes summary insights & stats</li>
+        </ul>
+      </div>
+
+      <a href="index.html" class="portfolio-btn">← Back to Portfolio</a>
+    </div>
+  </section>
+  <script>
+ const text = "🕒 Project Launching Soon… ";
+const typeTarget = document.getElementById("type-text");
+
+let i = 0;
+function type() {
+  if (i < text.length) {
+    typeTarget.textContent += text.charAt(i);
+    i++;
+    setTimeout(type, 60);
+  }
+}
+type();
+
+
+  </script>
+</body>
+</html>
