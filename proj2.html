@@ -11,9 +11,12 @@
     <div class="content-box">
       <h1 class="project-title">📘 Digital Notes Organizer</h1>
         
-<div class="typewriter-container">
-  <h2 class="typewriter-text"><span id="type-text"></span><span class="highlight-text">Stay Tuned!</span></h2>
-</div>
+      <div class="typewriter-container">
+        <h2 class="typewriter-text">
+          <span id="type-text"></span>
+          <span class="highlight-text">Stay Tuned!</span>
+        </h2>
+      </div>
 
       <p class="description">
         Digital Notes Organizer is an advanced web-based application that helps users store, organize, and retrieve notes with ease. Designed for students, professionals, and creators who want a clean and efficient space to manage all their ideas digitally.
@@ -35,21 +38,20 @@
       <a href="index.html" class="portfolio-btn">← Back to Portfolio</a>
     </div>
   </section>
+
   <script>
- const text = "🕒 Project Launching Soon… ";
-const typeTarget = document.getElementById("type-text");
+    const text = "🕒 Project Launching Soon… ";
+    const typeTarget = document.getElementById("type-text");
 
-let i = 0;
-function type() {
-  if (i < text.length) {
-    typeTarget.textContent += text.charAt(i);
-    i++;
-    setTimeout(type, 60);
-  }
-}
-type();
-
-
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        typeTarget.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 60);
+      }
+    }
+    type();
   </script>
 </body>
 </html>
